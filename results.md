@@ -6,8 +6,8 @@ Même dataset et même configuration (64 units, Dropout 0.2, `batch_size=1`, Ear
 |----------|------|-----|
 | Paramètres | 16 961 | 12 929 |
 | Epochs (EarlyStopping) | 41 | 98 |
-| Temps total (s) | 18.1 | 53.0 |
-| Temps / epoch (s) | 0.44 | 0.54 |
+| Temps total (s) | 17.0 | 51.0 |
+| Temps / epoch (s) | 0.41 | 0.52 |
 | Val loss finale | 0.0061 | 0.0031 |
 | RMSE test (passagers) | 35.1 | 33.4 |
 

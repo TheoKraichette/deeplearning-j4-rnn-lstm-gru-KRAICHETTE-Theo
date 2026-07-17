@@ -2,6 +2,8 @@
 
 Réseaux de neurones récurrents (RNN / LSTM / GRU) appliqués aux **séries temporelles** et au **NLP**, avec déploiement d'une **WebApp Streamlit**. Le tout tourne en local via Docker (TensorFlow 2.18 / Keras 3).
 
+**Démo en ligne :** https://deeplearning-j4-rnn-lstm-gru-kraichette-theo-vk2hrjd5c4asbvihp.streamlit.app/
+
 ## Les projets
 
 ### 1. Séries temporelles — Airline Passengers · `airline_passengers.ipynb`
@@ -14,7 +16,7 @@ Prévision du trafic aérien mensuel (144 points, 1949-1960) via une fenêtre gl
 - **AG News** · `ag_news.ipynb` : titres de presse classés en 4 catégories (World / Sports / Business / Sci/Tech), sortie **softmax multiclasse** → **accuracy 91,3 %**.
 
 ### 3. WebApp — `app.py`
-Interface Streamlit qui charge le modèle IMDB et prédit le sentiment d'une critique saisie en direct.
+Interface Streamlit qui charge le modèle IMDB et prédit le sentiment d'une critique saisie en direct. Déployée sur Streamlit Cloud : [ouvrir la démo](https://deeplearning-j4-rnn-lstm-gru-kraichette-theo-vk2hrjd5c4asbvihp.streamlit.app/).
 
 ## Lancer
 
@@ -52,7 +54,8 @@ docker compose --profile webapp up
 | `app.py` | WebApp Streamlit (inférence IMDB) |
 | `results.md` | Tableau comparatif LSTM vs GRU |
 | `*.keras` | Modèles entraînés |
-| `Dockerfile` · `docker-compose.yml` · `requirements.txt` | Environnement |
+| `Dockerfile` · `docker-compose.yml` | Environnement Docker local |
+| `requirements.txt` / `requirements-docker.txt` | Dépendances Streamlit Cloud / Docker |
 
 ## Stack
 
