@@ -1,0 +1,6 @@
+# Dependances du dev local (Docker), en plus de l'image tensorflow (numpy, tensorflow, keras 3).
+matplotlib
+pandas
+scikit-learn
+streamlit
+datasets

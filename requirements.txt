@@ -1,6 +1,4 @@
-# En plus de l'image de base (qui fournit deja python 3.11, numpy, tensorflow, keras 3)
-matplotlib
-pandas
-scikit-learn
+# Dependances pour Streamlit Cloud (environnement autonome, sans image Docker).
+# app.py n'a besoin que de streamlit et de tensorflow-cpu (qui fournit keras 3).
 streamlit
-datasets
+tensorflow-cpu==2.18.0
