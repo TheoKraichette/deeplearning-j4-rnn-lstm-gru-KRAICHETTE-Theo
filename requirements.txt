@@ -1,5 +1,4 @@
-# Dépendances installées par-dessus l'image tensorflow/tensorflow:2.18.0-jupyter.
-# numpy, tensorflow et keras 3 sont déjà fournis par l'image de base : ne pas les remettre ici.
+# En plus de l'image de base (qui fournit deja python 3.11, numpy, tensorflow, keras 3)
 matplotlib
 pandas
 scikit-learn

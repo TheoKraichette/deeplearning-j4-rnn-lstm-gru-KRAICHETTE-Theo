@@ -1,5 +1,5 @@
 services:
-  # Notebooks phases 1->6 : Jupyter + TensorBoard
+  # Jupyter + TensorBoard
   notebook:
     build: .
     image: j4-rnn-lstm
@@ -7,14 +7,13 @@ services:
       - "8888:8888"   # Jupyter
       - "6006:6006"   # TensorBoard
     volumes:
-      - ./:/tf/work                          # projet : notebooks, courbes, modeles .keras (persiste sur Windows)
-      - keras_cache:/root/.keras             # cache datasets keras (IMDB) entre rebuilds
-      - hf_cache:/root/.cache/huggingface    # cache datasets HuggingFace (AG News) entre rebuilds
+      - ./:/tf/work                          # projet (persiste sur Windows)
+      - keras_cache:/root/.keras             # cache datasets keras
+      - hf_cache:/root/.cache/huggingface    # cache datasets HuggingFace
     working_dir: /tf/work
     command: bash -c "tensorboard --logdir /tf/work/logs --host 0.0.0.0 --port 6006 & jupyter notebook --notebook-dir=/tf/work --ip=0.0.0.0 --port=8888 --no-browser --allow-root --IdentityProvider.token=''"
 
-  # WebApp phases 7->8 : ne demarre qu'a la demande (app.py n'existe qu'a partir de la phase 7)
-  # Lancer avec : docker compose --profile webapp up
+  # WebApp Streamlit, a la demande : docker compose --profile webapp up
   webapp:
     build: .
     image: j4-rnn-lstm

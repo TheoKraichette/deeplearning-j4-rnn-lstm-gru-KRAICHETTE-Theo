@@ -6,8 +6,5 @@ __pycache__/
 # Secrets
 .env
 
-# Logs volumineux (TensorBoard) - regeneres
+# Logs TensorBoard
 logs/
-
-# Runtime WebApp (phase 8, piste B)
-inference_log.csv
