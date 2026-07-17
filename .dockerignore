@@ -1,0 +1,10 @@
+.git
+.gitignore
+.claude/
+CLAUDE.md
+*.pdf
+__pycache__/
+.ipynb_checkpoints/
+logs/
+*.keras
+*.zip
